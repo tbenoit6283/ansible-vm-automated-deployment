@@ -1,0 +1,56 @@
+vcsa:
+  hostname: '10.197.140.102'
+  username: 'ansible@panlab.local'
+  password: 'Ansible!123'
+  datacenter: 'PanLab'
+  cluster: 'Cluster_Lab'
+  datastore: 'NFS_volume'
+
+vnf:
+  mgmt_pg_name: 'Management'
+  untrust_pg_name: 'vnf-untrust-pg'
+  trust_pg_name: 'vnf-trust-pg'
+  ha2_pg_name: 'vnf-ha2-pg'
+  switch_name: 'Panlab-DSwitch'
+  resource_pool: 'PA-VM-VNF-Demo-Pool'
+  template_name: 'pavmvnf-8.1.2-vm50'
+
+bts:
+  path: '/tmp/'
+
+panos_s:
+  hostname: 'PAN_NGFW_VNF'
+  ip_address: '10.197.140.159'
+  netmask: '255.255.255.0'
+  default_gateway: '10.197.140.1'
+  dns_primary: '8.8.8.8'
+  dns_secondary: '4.2.2.2'
+  panorama_server: '10.197.140.155'
+  tplname: 'VNF-Template-Stack'
+  dgname: 'VNF-DG'
+  vm_auth_key: '232811479756948'
+
+panos_ha:
+  a_hostname: 'PAN_NGFW_VNF_A'
+  a_ip: '10.197.140.159'
+  a_tplname: 'VNF-Template-Stack-A'
+  p_hostname: 'PAN_NGFW_VNF_B'
+  p_ip: '10.197.140.160'
+  p_tplname: 'VNF-Template-Stack-B'
+  netmask: '255.255.255.0'
+  default_gateway: '10.197.140.1'
+  dns_primary: '8.8.8.8'
+  dns_secondary: '4.2.2.2'
+  panorama_server: '10.197.140.155'
+  dgname: 'VNF-HA-DG'
+  vm_auth_key: '232811479756948'
+  vnf_affinity_rule: 'VNF_affinity_rule_01'
+
+lic:
+  username: 'admin'
+  password: 'admin'
+  panorama_username: 'admin'
+  panorama_password: 'paloalto'
+  authcode_vm50: 'I6173457'
+  authcode_vm100: 'I6553006'
+  api_key: '6a85f78e5cd9a7eccae9333361f3cbd798ee1e8c70bad9dfeb027f345e562d2d'
